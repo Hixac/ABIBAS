@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.27)
+
+project(Conductor)
+set(SOURCE src/main.cpp src/window/window.h src/window/window.cpp)
+set(IMGUI_DIR ext/imgui/)
+set(IMGUI_SRC ext/imgui/imstb_truetype.h ext/imgui/imstb_textedit.h ext/imgui/imstb_rectpack.h ext/imgui/imgui_widgets.cpp 
+    ext/imgui/imgui_tables.cpp ext/imgui/imgui_internal.h ext/imgui/imgui_impl_opengl3.h ext/imgui/imgui_impl_opengl3.cpp 
+    ext/imgui/imgui_impl_glfw.h ext/imgui/imgui_impl_glfw.cpp ext/imgui/imgui_draw.cpp ext/imgui/imgui_demo.cpp ext/imgui/imgui.h 
+    ext/imgui/imgui.cpp ext/imgui/imconfig.h ext/imgui/imgui_impl_opengl3_loader.h)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+  
+add_executable(${PROJECT_NAME} ${SOURCE} ${IMGUI_SRC})
+
+find_package(OpenGL REQUIRED)
+target_link_libraries(${PROJECT_NAME} OpenGL::GL)
+
+find_package(glfw3 3.3 REQUIRED)
+target_link_libraries(${PROJECT_NAME} glfw)
+
+target_include_directories(${PROJECT_NAME} PRIVATE ${IMGUI_DIR})
+
+target_include_directories(${PROJECT_NAME} PRIVATE src/window/)
