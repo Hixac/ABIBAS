@@ -1,11 +1,9 @@
-#include "imgui.h"
-#include <GL/gl.h>
 #include <GLFW/glfw3.h>
 #include <window.h>
 
 Window::Window(unsigned int width, unsigned int height, const char* title)
 {
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
     glfwInit();
 	
@@ -30,7 +28,6 @@ Window::Window(unsigned int width, unsigned int height, const char* title)
 Window::~Window()
 {	
 	glfwDestroyWindow(m_pWindow);
-	glfwTerminate();
 }
 
 bool Window::StartUpdate()

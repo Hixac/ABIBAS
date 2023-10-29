@@ -8,6 +8,7 @@ set(IMGUI_SRC ext/imgui/imstb_truetype.h ext/imgui/imstb_textedit.h ext/imgui/im
     ext/imgui/imgui_impl_glfw.h ext/imgui/imgui_impl_glfw.cpp ext/imgui/imgui_draw.cpp ext/imgui/imgui_demo.cpp ext/imgui/imgui.h 
     ext/imgui/imgui.cpp ext/imgui/imconfig.h ext/imgui/imgui_impl_opengl3_loader.h)
 
+set(CMAKE_CXX_FLAGS -g)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
   
 add_executable(${PROJECT_NAME} ${SOURCE} ${IMGUI_SRC})

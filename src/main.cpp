@@ -5,7 +5,7 @@
 
 int main(void)
 {
-	Window win(1280, 720, "Example");
+	Window win(1280, 720, "Проводник ебать");
     while (win.StartUpdate())
     {
 		if (ImGui::BeginMainMenuBar())
