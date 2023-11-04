@@ -2,6 +2,7 @@
 #include <window.h>
 
 Window::Window(unsigned int width, unsigned int height, const char* title)
+	: m_Height(height), m_Width(width)
 {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
@@ -15,6 +16,7 @@ Window::Window(unsigned int width, unsigned int height, const char* title)
 	IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO(); (void)io;
+	
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
 
     // Setup Dear ImGui style

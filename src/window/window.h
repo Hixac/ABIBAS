@@ -12,9 +12,15 @@ public:
 	
 	static void StopIMGUI();
 
+	inline unsigned int GetWidth() { return m_Width; }
+	inline unsigned int GetHeight() { return m_Height; }
+	
 	bool StartUpdate();
     void EndUpdate();
 	bool IsClosed();
 private:
     GLFWwindow* m_pWindow;
+
+	unsigned int m_Height;
+	unsigned int m_Width;
 };
