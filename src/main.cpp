@@ -1,4 +1,5 @@
 #include <imgui.h>
+#include <misc/cpp/imgui_stdlib.h>
 #include <window.h>
 #include <spdlog/spdlog.h>
 #define DEBUG
@@ -28,7 +29,8 @@ int main(void)
 	INIT_LOG();
 	
 	static std::string exPath = "/home/hixac/Projects/";
-	std::vector<std::filesystem::path> dirs = GetAllDirsInPath(exPath);
+	static std::vector<std::filesystem::path> dirs = GetAllDirsInPath(exPath);
+	static int item_current_idx = 0;
 	
   	Window win(1280, 720, "Проводник ебать");
     while (win.StartUpdate())
@@ -39,15 +41,17 @@ int main(void)
 			{
 				try
 				{
-					ImGui::InputText("Input", &exPath[0], 255);
+					ImGui::InputText("Input", &exPath);
 					dirs = GetAllDirsInPath(exPath);
+
+					item_current_idx = 0;
+
+					LOG_INFO("Correctly changed to " + exPath);
 				}
 				catch (...)
 				{
 					LOG_WARN("Bullshit!");
 				}
-				
-				static int item_current_idx = 0;
 				
 				if (ImGui::BeginCombo("Directories", dirs[item_current_idx].c_str()))
 				{

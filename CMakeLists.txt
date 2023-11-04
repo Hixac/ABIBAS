@@ -14,6 +14,8 @@ set(IMGUI_DIR ext/imgui/)
 set(SPDLOG_DIR ext/spdlog/)
 
 set(IMGUI_SRC
+  /home/hixac/Projects/Conductor/ext/imgui/misc/cpp/imgui_stdlib.h
+  /home/hixac/Projects/Conductor/ext/imgui/misc/cpp/imgui_stdlib.cpp
   /home/hixac/Projects/Conductor/ext/imgui/misc
   /home/hixac/Projects/Conductor/ext/imgui/imstb_truetype.h
   /home/hixac/Projects/Conductor/ext/imgui/imstb_textedit.h
