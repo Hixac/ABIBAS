@@ -1,5 +1,6 @@
 #include <imgui.h>
 #include <misc/cpp/imgui_stdlib.h>
+#include <stdexcept>
 #include <window.h>
 #include <spdlog/spdlog.h>
 #define DEBUG
@@ -11,16 +12,21 @@
 
 std::vector<std::filesystem::path> GetAllDirsInPath(const std::filesystem::path& in)
 {
+	bool IsAtLeastOneDir = false;
 	std::vector<std::filesystem::path> dirs;
 	
 	for (const auto & entry : std::filesystem::directory_iterator(in))
 	{
 		if (std::filesystem::is_directory(entry))
 		{
+			IsAtLeastOneDir = true;
 		    dirs.push_back(entry);
 		}
 	}
 
+	if (!IsAtLeastOneDir)
+		throw std::invalid_argument("No directories!");
+	
 	return dirs;
 }
 
@@ -68,6 +74,7 @@ int main(void)
 					}
 					ImGui::EndCombo();
 				}
+				
 				ImGui::EndMenu();
 			}
 			ImGui::EndMainMenuBar();

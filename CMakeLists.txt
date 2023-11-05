@@ -14,28 +14,28 @@ set(IMGUI_DIR ext/imgui/)
 set(SPDLOG_DIR ext/spdlog/)
 
 set(IMGUI_SRC
-  /home/hixac/Projects/Conductor/ext/imgui/misc/cpp/imgui_stdlib.h
-  /home/hixac/Projects/Conductor/ext/imgui/misc/cpp/imgui_stdlib.cpp
-  /home/hixac/Projects/Conductor/ext/imgui/misc
-  /home/hixac/Projects/Conductor/ext/imgui/imstb_truetype.h
-  /home/hixac/Projects/Conductor/ext/imgui/imstb_textedit.h
-  /home/hixac/Projects/Conductor/ext/imgui/imstb_rectpack.h
-  /home/hixac/Projects/Conductor/ext/imgui/imgui_widgets.cpp
-  /home/hixac/Projects/Conductor/ext/imgui/imgui_tables.cpp
-  /home/hixac/Projects/Conductor/ext/imgui/imgui_internal.h
-  /home/hixac/Projects/Conductor/ext/imgui/imgui_impl_opengl3_loader.h
-  /home/hixac/Projects/Conductor/ext/imgui/imgui_impl_opengl3.h
-  /home/hixac/Projects/Conductor/ext/imgui/imgui_impl_opengl3.cpp
-  /home/hixac/Projects/Conductor/ext/imgui/imgui_impl_glfw.h
-  /home/hixac/Projects/Conductor/ext/imgui/imgui_impl_glfw.cpp
-  /home/hixac/Projects/Conductor/ext/imgui/imgui_draw.cpp
-  /home/hixac/Projects/Conductor/ext/imgui/imgui_demo.cpp
-  /home/hixac/Projects/Conductor/ext/imgui/imgui.h
-  /home/hixac/Projects/Conductor/ext/imgui/imgui.cpp
-  /home/hixac/Projects/Conductor/ext/imgui/imconfig.h)
+  ${PROJECT_SOURCE_DIR}/ext/imgui/misc/cpp/imgui_stdlib.h
+  ${PROJECT_SOURCE_DIR}/ext/imgui/misc/cpp/imgui_stdlib.cpp
+  ${PROJECT_SOURCE_DIR}/ext/imgui/misc
+  ${PROJECT_SOURCE_DIR}/ext/imgui/imstb_truetype.h
+  ${PROJECT_SOURCE_DIR}/ext/imgui/imstb_textedit.h
+  ${PROJECT_SOURCE_DIR}/ext/imgui/imstb_rectpack.h
+  ${PROJECT_SOURCE_DIR}/ext/imgui/imgui_widgets.cpp
+  ${PROJECT_SOURCE_DIR}/ext/imgui/imgui_tables.cpp
+  ${PROJECT_SOURCE_DIR}/ext/imgui/imgui_internal.h
+  ${PROJECT_SOURCE_DIR}/ext/imgui/imgui_impl_opengl3_loader.h
+  ${PROJECT_SOURCE_DIR}/ext/imgui/imgui_impl_opengl3.h
+  ${PROJECT_SOURCE_DIR}/ext/imgui/imgui_impl_opengl3.cpp
+  ${PROJECT_SOURCE_DIR}/ext/imgui/imgui_impl_glfw.h
+  ${PROJECT_SOURCE_DIR}/ext/imgui/imgui_impl_glfw.cpp
+  ${PROJECT_SOURCE_DIR}/ext/imgui/imgui_draw.cpp
+  ${PROJECT_SOURCE_DIR}/ext/imgui/imgui_demo.cpp
+  ${PROJECT_SOURCE_DIR}/ext/imgui/imgui.h
+  ${PROJECT_SOURCE_DIR}/ext/imgui/imgui.cpp
+  ${PROJECT_SOURCE_DIR}/ext/imgui/imconfig.h)
 
 set(SPDLOG_SRC
-  /home/hixac/Projects/Conductor/ext/spdlog/spdlog)
+  ${PROJECT_SOURCE_DIR}/ext/spdlog/spdlog)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_FLAGS -g)
